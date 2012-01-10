@@ -1,6 +1,6 @@
 %define module	etsproxy
 %define name 	python-%{module}
-%define version 0.1.0
+%define version 0.1.1
 %define release %mkrel 1
 
 Summary: 	Enthought Tool Suite - proxy modules for backwards compatibility
@@ -10,7 +10,7 @@ Release: 	%{release}
 Source0: 	http://www.enthought.com/repo/ets/%{module}-%{version}.tar.gz
 License: 	BSD
 Group: 	 	Development/Python
-Url: 	 	http://code.enthought.com/projects/
+Url: 	 	https://github.com/enthought/etsproxy/
 BuildRoot: 	%{_tmppath}/%{name}-%{version}-%{release}-buildroot
 BuildArch: 	noarch
 BuildRequires: 	python-setuptools >= 0.6c8
@@ -38,9 +38,6 @@ PYTHONDONTWRITEBYTECODE= %__python setup.py install --root=%{buildroot} --record
 %clean
 %__rm -rf %{buildroot}
 
-%files
+%files -f FILE_LIST
 %defattr(-,root,root)
 %doc *.txt *.rst 
-%_bindir/ets3to4
-%py_sitedir/enthought/*
-%py_sitedir/%{module}*
