@@ -1,17 +1,13 @@
 %define module	etsproxy
-%define name 	python-%{module}
-%define version 0.1.1
-%define release %mkrel 1
 
 Summary: 	Enthought Tool Suite - proxy modules for backwards compatibility
-Name: 	 	%{name}
-Version: 	%{version}
-Release: 	%{release}
+Name: 	 	python-%{module}
+Version: 	0.1.1
+Release: 	2
 Source0: 	http://www.enthought.com/repo/ets/%{module}-%{version}.tar.gz
 License: 	BSD
 Group: 	 	Development/Python
 Url: 	 	https://github.com/enthought/etsproxy/
-BuildRoot: 	%{_tmppath}/%{name}-%{version}-%{release}-buildroot
 BuildArch: 	noarch
 BuildRequires: 	python-setuptools >= 0.6c8
 
@@ -32,12 +28,19 @@ ones.
 PYTHONDONTWRITEBYTECODE= %__python setup.py build
 
 %install
-%__rm -rf %{buildroot}
 PYTHONDONTWRITEBYTECODE= %__python setup.py install --root=%{buildroot} --record=FILE_LIST
-
-%clean
-%__rm -rf %{buildroot}
+sed -i 's/.*egg-info$//' FILE_LIST
 
 %files -f FILE_LIST
-%defattr(-,root,root)
 %doc *.txt *.rst 
+
+
+%changelog
+* Tue Jan 10 2012 Lev Givon <lev@mandriva.org> 0.1.1-1mdv2012.0
++ Revision: 759471
+- Update to 0.1.1.
+
+* Tue Oct 18 2011 Lev Givon <lev@mandriva.org> 0.1.0-1
++ Revision: 705241
+- imported package python-etsproxy
+
