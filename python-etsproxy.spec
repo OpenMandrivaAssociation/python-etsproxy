@@ -2,9 +2,9 @@
 
 Summary: 	Enthought Tool Suite - proxy modules for backwards compatibility
 Name: 	 	python-%{module}
-Version: 	0.1.1
-Release: 	2
-Source0: 	http://www.enthought.com/repo/ets/%{module}-%{version}.tar.gz
+Version: 	0.1.2
+Release: 	1
+Source0: 	https://www.enthought.com/repo/ets/etsproxy-%{version}.tar.gz
 License: 	BSD
 Group: 	 	Development/Python
 Url: 	 	https://github.com/enthought/etsproxy/
@@ -43,4 +43,5 @@ sed -i 's/.*egg-info$//' FILE_LIST
 * Tue Oct 18 2011 Lev Givon <lev@mandriva.org> 0.1.0-1
 + Revision: 705241
 - imported package python-etsproxy
+
 

@@ -1,2 +1,4 @@
+removed_sources:
+  etsproxy-0.1.1.tar.gz: 16aa8e8770bbf2b18915eb64da813e0d0fd27411
 sources:
-  "etsproxy-0.1.1.tar.gz": 16aa8e8770bbf2b18915eb64da813e0d0fd27411
+  etsproxy-0.1.2.tar.gz: 765d2ee8f71b974cf9a747042a0638b17545052c
