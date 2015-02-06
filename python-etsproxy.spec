@@ -3,7 +3,7 @@
 Summary: 	Enthought Tool Suite - proxy modules for backwards compatibility
 Name: 	 	python-%{module}
 Version: 	0.1.2
-Release: 	1
+Release: 	2
 Source0: 	https://www.enthought.com/repo/ets/etsproxy-%{version}.tar.gz
 License: 	BSD
 Group: 	 	Development/Python
